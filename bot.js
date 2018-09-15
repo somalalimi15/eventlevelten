@@ -328,19 +328,9 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
-    if (message.content === 'اوامر عامة') {
-        let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**أوامر عامة...**')
-        .addField('Avatar', "**افاتار الشخص المطلوب**")
-        .addField('Gif', '**البحث عن جيف انت تطلبه**')
-        .addField('Ping', 'معرفة**ء ping البوت**')
-      message.channel.send(helpEmbed);
-    }
-});
 
     client.on('ready', () => {
-     client.user.setActivity("Type | 1Play .",{type: 'Playing'});
+     client.user.setActivity("Event | On.Rz .",{type: 'Playing'});
 
 });
 
