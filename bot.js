@@ -355,4 +355,14 @@ client.on('ready', () => {
     client.channels.find(c => c.id === '490269575376797716').join();
 });
 
+client.on('ready',async () => {
+  sendReady('491517470138433536', `**__ تـم تـشـغـيـل الـبـوت بـنـجـاح , Event Bot | Owner Bot : SoM # 1100__**`);
+  
+  function sendReady(channel, message) {
+    client.channels.get(channel).send(message);
+    console.log(message);
+  }
+});
+
+
 client.login(process.env.BOT_TOKEN);
