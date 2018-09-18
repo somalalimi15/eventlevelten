@@ -330,7 +330,7 @@ client.on('message', message => {
 
 
     client.on('ready', () => {
-     client.user.setActivity("Event | On.Rz .",{type: 'Playing'});
+     client.user.setActivity("Event | On.Rz .",{type: 'streaming'});
 
 });
 
