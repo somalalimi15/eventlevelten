@@ -340,7 +340,6 @@ message.member.voiceChannel.join();
 }
 });
 
-==============================
 client.on('message', msg => {
 
     if (msg.content == 'ejoin') {
