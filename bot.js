@@ -334,26 +334,27 @@ client.on('message', message => {
 
 });
 
-  client.on('message', message => {
-  if (!message.guild) return;
+client.on('message', message => {
+ if(message.content.startsWith(prefix + "ecome")) {
+message.member.voiceChannel.join();
+}
+});
 
-  if (message.content === 'eplay') {
-    if (message.member.voiceChannel) {
-      message.member.voiceChannel.join()
-        .then(connection => { 
-          message.reply('لقد دخلت الروم بنجاح !');
-        })
-        .catch(console.log);
-    } else {
-      message.reply('يجب ان تكون في روم صوتي');
+==============================
+client.on('message', msg => {
+
+    if (msg.content == 'ejoin') {
+        if (msg.member.voiceChannel) {
+
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join().then(msg.react('✅'));
+     }
     }
-  }
-});
-  
-
+}
+})
 client.on('ready', () => {
-    client.channels.find(c => c.id === '490269575376797716').join();
-});
+    client.channels.get("490269575376797716").join();
+    });
 
 client.on('ready',async () => {
   sendReady('491517470138433536', `**__ تـم تـشـغـيـل الـبـوت بـنـجـاح , Event Bot | Owner Bot : SoM # 1100__**`);
